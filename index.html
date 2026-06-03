@@ -7,15 +7,7 @@
 <body>
   <h1>Парсер формул</h1>
 
-  <script>
-    WebAssembly.instantiateStreaming(fetch("DiscrGen.wasm"))
-      .then(({ instance }) => {
-        console.log("WASM успешно загружен", instance.exports);
-
-        // Example: call exported function
-        // console.log(instance.exports.add(2, 3));
-      })
-      .catch(console.error);
+  <script src="DiscrGen.js">
   </script>
 </body>
 </html>
