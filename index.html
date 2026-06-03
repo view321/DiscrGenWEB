@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Парсер формул</title>
+</head>
+<body>
+  <h1>Парсер формул</h1>
+
+  <script>
+    WebAssembly.instantiateStreaming(fetch("DiscrGen.wasm"))
+      .then(({ instance }) => {
+        console.log("WASM успешно загружен", instance.exports);
+
+        // Example: call exported function
+        // console.log(instance.exports.add(2, 3));
+      })
+      .catch(console.error);
+  </script>
+</body>
+</html>
